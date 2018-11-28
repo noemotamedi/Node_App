@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+  <form action="/api/items" method="POST">
+  <input type="text" placeholder="Name" name="dogs">
+  <input type="text" placeholder="Type" name="type">
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
+
+<ul class="dogs">
+  <table class = "dogs" border = "1px">
+    <tr>
+      <th>Name</th>
+      <th>Breed</th>
+    </tr>
+  <% for(var i = 0; i < dogs.length; i++) {%>
+  <tr>
+      <td><%= dogs[i].dogs%>
+      </td>
+      <td><%= dogs[i].type %></td>
+      <td><form method="post" action="/api/delete">
+      <input type="hidden" name="id" value="<%=dogs[i].id%>">
+      <input type = "submit" value="delete" method="DELETE">
+    </form>
+    </td>
+  </tr>
+  <% }%>
+</ul>
