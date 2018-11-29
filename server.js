@@ -59,4 +59,5 @@ MongoClient.connect('mongodb://CarlosMatos:bitc0nnect@ds249123.mlab.com:49123/ca
 
     db = client.db('carlosmatosclub');
     port= process.env.PORT || 80
+    app.listen(port)
 })
